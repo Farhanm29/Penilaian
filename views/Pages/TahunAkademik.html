@@ -9,7 +9,7 @@
             </div>
             <br>
             <a style="margin-left: 10px;" id="modal-195230" href="" role="button" class="btn btn-primary"
-                data-target="#modal-container-195230" data-toggle="modal" ng-click = "GetSimpan()">ADD</a>
+                data-target="#modal-container-195230" data-toggle="modal" ng-click="GetSimpan()">ADD</a>
             <div class="panel-body">
 
                 <div class="table-responsive">
@@ -26,17 +26,18 @@
                             </tr>
                         </tdead>
                         <tbody>
-                            <tr ng-repeat="item in DatasMahasiswa">
+                            <tr ng-repeat="item in DatasTahunAkademik">
                                 <td align="center">{{$index+1}}</td>
                                 <td align="center">{{item.npm}}</td>
                                 <td align="center">{{item.nm_mahasiswa}}</td>
                                 <td align="center">{{item.alamat}}</td>
                                 <td align="center">{{item.jurusan}}</td>
                                 <td align="center">{{item.jenjang}}</td>
-                                <td align="center"><button class="btn btn-info"
-                                     id="modal-195230" data-target="#modal-container-195230" 
-                                     data-toggle="modal" ng-click="GetData(item)">Ubah</button></td>
-                                <td align="center"><button class="btn btn-warning"  ng-click ="Hapus(item)">Hapus</button></td>
+                                <td align="center"><button class="btn btn-info" id="modal-195230"
+                                        data-target="#modal-container-195230" data-toggle="modal"
+                                        ng-click="GetData(item)">Ubah</button></td>
+                                <td align="center"><button class="btn btn-warning" ng-click="Hapus(item)">Hapus</button>
+                                </td>
                             </tr>
                         </tbody>
                     </table>
@@ -57,7 +58,7 @@
                     <div class="modal-content">
                         <div class="modal-header">
                             <h5 class="modal-title" id="myModalLabel">
-                                MASUKAN DATA    
+                                MASUKAN DATA
                             </h5>
                             <button type="button" class="close" data-dismiss="modal">
                                 <span aria-hidden="true">×</span>
@@ -71,43 +72,49 @@
                                         NPM
                                     </label>
                                     <input type="text" class="form-control" id="exampleInputNpm" ng-model="input.npm" />
-                                    
+
                                 </div>
                                 <div class="form-group">
 
                                     <label for="exampleInputnm_mahasiswa">
                                         Nama Mahasiswa
                                     </label>
-                                    <input type="text" class="form-control" id="exampleInputnm_mahasiswa" ng-model="input.nm_mahasiswa" />
+                                    <input type="text" class="form-control" id="exampleInputnm_mahasiswa"
+                                        ng-model="input.nm_mahasiswa" />
                                 </div>
                                 <div class="form-group">
 
                                     <label for="exampleInputAlamat">
                                         Alamat
                                     </label>
-                                    <input type="text" class="form-control" id="exampleInputAlamat" ng-model="input.alamat" />
+                                    <input type="text" class="form-control" id="exampleInputAlamat"
+                                        ng-model="input.alamat" />
                                 </div>
                                 <div class="form-group">
 
                                     <label for="exampleInputJurusan">
-                                        Jurusan                                                   
+                                        Jurusan
                                     </label>
-                                    
-                                    <select class="form-control" ng-options="item as item.jurusan for item in DatasJurusan track by item.kd_jurusan" ng-model="SelectedJurusan"></select>      
+
+                                    <select class="form-control"
+                                        ng-options="item as item.jurusan for item in DatasJurusan track by item.kd_jurusan"
+                                        ng-model="SelectedJurusan"></select>
                                 </div>
                                 <div class="form-group">
 
-                                        <label for="exampleInputJenjang">
+                                    <label for="exampleInputJenjang">
                                         Jenjang
-                                        </label>
-                                        <select class="form-control" ng-options="item.Jenjang for item in Jenjang track by item.Jenjang" ng-model="selectedJenjang"></select>
-                                       
-                                    </div>
+                                    </label>
+                                    <select class="form-control"
+                                        ng-options="item.Jenjang for item in Jenjang track by item.Jenjang"
+                                        ng-model="selectedJenjang"></select>
+
+                                </div>
 
                         </div>
                         <div class="modal-footer">
 
-                            <button type="button" class="btn btn-primary" ng-click = "Simpan()">
+                            <button type="button" class="btn btn-primary" ng-click="Simpan()">
                                 Save </button>
                             <button type="button" class="btn btn-secondary" data-dismiss="modal">
                                 Close
