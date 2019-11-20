@@ -1,7 +1,7 @@
 (function (angular) {
     'use strict'
-    angular.module("Penilaian", [])
-    .controller("PenilaianController", function($scope,$http){
+    angular.module("TahunAkademik", [])
+    .controller("TahunAkademikController", function($scope,$http){
 
     })
 })(window.angular);
