@@ -8,8 +8,8 @@
                 </div>
             </div>
             <br>
-            <a style="margin-left: 10px;" id="modal-195230" href="" role="button" class="btn btn-primary"
-                data-target="#modal-container-195230" data-toggle="modal" ng-click = "GetSimpan()">ADD</a>
+            <a style="margin-left: 16px;" id="modal-195230" href="" role="button" class="btn btn-primary"
+                data-target="#modal-container-195230" data-toggle="modal" ng-click = "GetSimpan()">Tambah</a>
             <div class="panel-body">
 
                 <div class="table-responsive">
@@ -17,22 +17,18 @@
                         <tdead>
                             <tr>
                                 <td align="center"><b>No</b></td>
-                                <td align="center"><b>NPM</b></td>
-                                <td align="center"><b>Nama Mahasiswa</b></td>
-                                <td align="center"><b>Alamat</b></td>
-                                <td align="center"><b>jurusan</b></td>
-                                <td align="center"><b>Jenjang</b></td>
+                                <td align="center"><b>KDMK</b></td>
+                                <td align="center"><b>Nama Dosen</b></td>
+                                <td align="center"><b>Nama Matakuliah</b></td>
                                 <td align="center" colspan="2"><b>Action</b></td>
                             </tr>
                         </tdead>
                         <tbody>
                             <tr ng-repeat="item in DatasMatakuliah">
                                 <td align="center">{{$index+1}}</td>
-                                <td align="center">{{item.npm}}</td>
-                                <td align="center">{{item.nm_mahasiswa}}</td>
-                                <td align="center">{{item.alamat}}</td>
-                                <td align="center">{{item.jurusan}}</td>
-                                <td align="center">{{item.jenjang}}</td>
+                                <td align="center">{{item.kdmk}}</td>
+                                <td align="center">{{item.dosen}}</td>
+                                <td align="center">{{item.nama_mata_kuliah}}</td>
                                 <td align="center"><button class="btn btn-info"
                                      id="modal-195230" data-target="#modal-container-195230" 
                                      data-toggle="modal" ng-click="GetData(item)">Ubah</button></td>

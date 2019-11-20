@@ -1,8 +1,10 @@
 (function (angular) {
     'use strict'
     angular.module("Mahasiswa", [])
-    .controller("MahasiswaController", function($scope,$http){
-        $scope.DatasMahasiswa = [];
+        .controller("MahasiswaController", function ($scope, $http) {
+            $scope.DatasMahasiswa = [];
+            $scope.input = {};
+            $scope.status = "Simpan";
             $http({
                 method: "get",
                 url: "http://localhost/Penilaian/restapi/mahasiswa",
@@ -10,9 +12,11 @@
                     "Content-Type": "application/json"
                 }
             }).then(function (response) {
-                $scope.DatasPegawai = response.data.result
+                $scope.DatasMahasiswa = response.data.result
             })
+    
 
 
-    })
+
+        })
 })(window.angular);
