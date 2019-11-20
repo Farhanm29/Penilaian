@@ -6,6 +6,7 @@
         "DetailPenilaian",
         "Kompetensi",
         "Matakuliah",
-        "Penilaian"
+        "Penilaian",
+        "TahunAkademik"
     ]);
 })(window.angular);

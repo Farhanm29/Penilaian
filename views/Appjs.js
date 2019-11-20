@@ -34,6 +34,11 @@
                     templateUrl: "views/pages/Kompetensi.html",
                     controller: "KompetensiController"
                 })
+                .state("TahunAkademik", {
+                    url: "/TahunAkademik",
+                    templateUrl: "views/pages/TahunAkademik.html",
+                    controller: "TahunAkademikController"
+                })
         })
 
 }) (window.angular);
