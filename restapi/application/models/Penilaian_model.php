@@ -29,7 +29,7 @@ class Penilaian_Model extends CI_Model
 
     public function delete($id)
     {
-        $this->db->where("idpenilaian", $id['idpenilaian    ']);
+        $this->db->where("idpenilaian", $id["idpenilaian"]);
             $result =  $this->db->delete("penilaian");
             return $result;
     }

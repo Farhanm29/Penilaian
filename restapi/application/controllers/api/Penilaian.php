@@ -50,7 +50,7 @@ class Penilaian extends API_Controller
     public function Updatepenilaian()
     {
         $data = json_decode($this->input->raw_input_stream);
-        $result = $this->penilaianModel->update($data);
+        $result = $this->PenilaianModel->update($data);
         if ($result){
             $this->api_return(
                 [
@@ -71,7 +71,7 @@ class Penilaian extends API_Controller
     public function Deletepenilaian()
     {
         $id = $_GET;
-        $result = $this->penilaianModel->delete($id);
+        $result = $this->PenilaianModel->delete($id);
         if ($result){
             $this->api_return(
                 [

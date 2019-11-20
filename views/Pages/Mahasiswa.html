@@ -78,37 +78,24 @@
                                         Nama Mahasiswa
                                     </label>
                                     <input type="text" class="form-control" id="exampleInputnm_mahasiswa"
-                                        ng-model="input.nm_mahasiswa" />
+                                        ng-model="input.nama_mahasiswa" />
                                 </div>
                                 <div class="form-group">
 
                                     <label for="exampleInputAlamat">
-                                        Alamat
+                                        Kelas
                                     </label>
-                                    <input type="text" class="form-control" id="exampleInputAlamat"
-                                        ng-model="input.alamat" />
+                                    <input type="text" class="form-control" id="exampleInputKelas"
+                                        ng-model="input.kls" />
                                 </div>
                                 <div class="form-group">
 
-                                    <label for="exampleInputJurusan">
-                                        Jurusan
+                                    <label for="exampleInputAlamat">
+                                        Program Studi
                                     </label>
-
-                                    <select class="form-control"
-                                        ng-options="item as item.jurusan for item in DatasJurusan track by item.kd_jurusan"
-                                        ng-model="SelectedJurusan"></select>
+                                    <input type="text" class="form-control" id="exampleInputProgramStudi"
+                                        ng-model="input.program_studi" />
                                 </div>
-                                <div class="form-group">
-
-                                    <label for="exampleInputJenjang">
-                                        Jenjang
-                                    </label>
-                                    <select class="form-control"
-                                        ng-options="item.Jenjang for item in Jenjang track by item.Jenjang"
-                                        ng-model="selectedJenjang"></select>
-
-                                </div>
-
                         </div>
                         <div class="modal-footer">
 

@@ -18,8 +18,8 @@
                             <tr>
                                 <td align="center"><b>No</b></td>
                                 <td align="center"><b>KDMK</b></td>
+                                <td align="center"><b>Matakuliah</b></td>
                                 <td align="center"><b>Nama Dosen</b></td>
-                                <td align="center"><b>Nama Matakuliah</b></td>
                                 <td align="center" colspan="2"><b>Action</b></td>
                             </tr>
                         </tdead>
@@ -27,8 +27,8 @@
                             <tr ng-repeat="item in DatasMatakuliah">
                                 <td align="center">{{$index+1}}</td>
                                 <td align="center">{{item.kdmk}}</td>
-                                <td align="center">{{item.dosen}}</td>
                                 <td align="center">{{item.nama_mata_kuliah}}</td>
+                                <td align="center">{{item.dosen}}</td>
                                 <td align="center"><button class="btn btn-info"
                                      id="modal-195230" data-target="#modal-container-195230" 
                                      data-toggle="modal" ng-click="GetData(item)">Ubah</button></td>
