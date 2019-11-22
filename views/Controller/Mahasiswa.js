@@ -53,7 +53,7 @@
             $scope.Hapus = function (item) {
                 $http({
                     method: "delete",
-                    url: "http://localhost/Aim/DbKrs/mahasiswa?npm=" + item.npm,
+                    url: "http://localhost/Penilaian/restapi/mahasiswa?npm=" + item.npm,
                 }).then(function (response) {
                     var index = $scope.DatasMahasiswa.indexOf(item);
                     $scope.DatasMahasiswa.splice(index, 1);
@@ -62,6 +62,13 @@
                     alert("Gagal Menghapus");
                 })
             }
+            $scope.GetSimpan = function (item) {
+                $scope.input = {};
+                $scope.status = "Simpan";
+            }
+
+
+    
             
 
 
