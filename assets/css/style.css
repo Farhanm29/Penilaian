@@ -14,11 +14,11 @@
 
 body {
 
-    color: #797979;
+    color: #000000;
 
     background: #eeeeee;
 
-    font-family: 'Lato', sans-serif;
+    font-family: 'Times New Roman', Times, serif ;
 
     padding: 0px !important;
 
@@ -516,7 +516,7 @@ table tr th { color: #688a7e;}
 
     position: fixed;
 
-    background: #394a59;
+    background: black;
 
 }
 
