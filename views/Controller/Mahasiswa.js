@@ -66,6 +66,10 @@
                 $scope.input = {};
                 $scope.status = "Simpan";
             }
+            $scope.GetData=function(item){
+                $scope.input = item;
+                $scope.status = "Update";
+            }
 
 
     
