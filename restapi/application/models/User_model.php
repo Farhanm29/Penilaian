@@ -7,7 +7,15 @@ class User_model extends CI_Model
         $Pasword = $data['Pasword'];
         $Username = $data['Username'];
         $result = $this->db->query("
-            SELECT * FROM user WHERE (Username = '$Username' OR email = '$Username') AND Pasword = '$Pasword'
+            SELECT
+                `role`.`Nama_role`,
+                `role`.`idrole`,
+                `user`.*
+            FROM
+                `user`
+                LEFT JOIN `userinrole` ON `user`.`iduser` = `userinrole`.`iduser`
+                LEFT JOIN `role` ON `role`.`idrole` = `userinrole`.`idrole`
+            WHERE (Username = '$Username' OR email = '$Username') AND Pasword = '$Pasword'
         ");
         if($result->num_rows()>0){
             $message = [
@@ -17,7 +25,7 @@ class User_model extends CI_Model
             return $message;
         }else{
             $message = [
-                "Status" => true
+                "Status" => false
             ];
             return $message;
         }
