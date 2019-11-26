@@ -60,7 +60,7 @@
             }
             $scope.GetData=function(item){
                 $scope.input = item;
-                $scope.status=update;
+                $scope.status="Update";
 
             }
            

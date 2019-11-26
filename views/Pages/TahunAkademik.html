@@ -19,7 +19,7 @@
                                 <td align="center"><b>No</b></td>
                                 <td align="center"><b>Id Tahun Akademik</b></td>
                                 <td align="center"><b>Tahun Akademik</b></td>
-                                <td align="center"><b>Semester</b></td>
+                                <td align="center"><b>Ganjil Genap</b></td>
                                 <td align="center" colspan="2"><b>Action</b></td>
                             </tr>
                         </tdead>
@@ -64,48 +64,31 @@
                             <form role="form">
                                 <div class="form-group">
 
-                                    <label for="exampleInputNpm">
-                                        NPM
+                                    <label for="exampleInputidtahunakademik">
+                                        Id Tahun Akademik
                                     </label>
-                                    <input type="text" class="form-control" id="exampleInputNpm" ng-model="input.npm" />
+                                    <input type="text" class="form-control" id="exampleInputidtahunakademik" ng-model="input.idtahunakademik" />
 
                                 </div>
                                 <div class="form-group">
 
-                                    <label for="exampleInputnm_mahasiswa">
-                                        Nama Mahasiswa
+                                    <label for="exampleInputta">
+                                        Tahun Akhir
                                     </label>
-                                    <input type="text" class="form-control" id="exampleInputnm_mahasiswa"
-                                        ng-model="input.nm_mahasiswa" />
+                                    <input type="text" class="form-control" id="exampleInputta"
+                                        ng-model="input.ta" />
                                 </div>
                                 <div class="form-group">
 
-                                    <label for="exampleInputAlamat">
-                                        Alamat
+                                    <label for="exampleInputgg">
+                                        Ganjil Genap
                                     </label>
-                                    <input type="text" class="form-control" id="exampleInputAlamat"
-                                        ng-model="input.alamat" />
+                                    <input type="text" class="form-control" id="exampleInputgg"
+                                        ng-model="input.gg" />
                                 </div>
                                 <div class="form-group">
 
-                                    <label for="exampleInputJurusan">
-                                        Jurusan
-                                    </label>
-
-                                    <select class="form-control"
-                                        ng-options="item as item.jurusan for item in DatasJurusan track by item.kd_jurusan"
-                                        ng-model="SelectedJurusan"></select>
-                                </div>
-                                <div class="form-group">
-
-                                    <label for="exampleInputJenjang">
-                                        Jenjang
-                                    </label>
-                                    <select class="form-control"
-                                        ng-options="item.Jenjang for item in Jenjang track by item.Jenjang"
-                                        ng-model="selectedJenjang"></select>
-
-                                </div>
+                            
 
                         </div>
                         <div class="modal-footer">

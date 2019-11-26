@@ -8,8 +8,8 @@
                 </div>
             </div>
             <br>
-            <a style="margin-left: 10px;" id="modal-195230" href="" role="button" class="btn btn-primary"
-                data-target="#modal-container-195230" data-toggle="modal" ng-click = "GetSimpan()">ADD</a>
+            <a style="margin-left: 16px;" id="modal-195230" href="" role="button" class="btn btn-primary"
+                data-target="#modal-container-195230" data-toggle="modal" ng-click = "GetSimpan()">Tambah</a>
             <div class="panel-body">
 
                 <div class="table-responsive">
@@ -17,22 +17,16 @@
                         <tdead>
                             <tr>
                                 <td align="center"><b>No</b></td>
-                                <td align="center"><b>NPM</b></td>
-                                <td align="center"><b>Nama Mahasiswa</b></td>
-                                <td align="center"><b>Alamat</b></td>
-                                <td align="center"><b>jurusan</b></td>
-                                <td align="center"><b>Jenjang</b></td>
+                                <td align="center"><b>No Kompetensi</b></td>
+                                <td align="center"><b>Butir_Yang_Dinilai</b></td>
                                 <td align="center" colspan="2"><b>Action</b></td>
                             </tr>
                         </tdead>
                         <tbody>
                             <tr ng-repeat="item in DatasKompetensi">
                                 <td align="center">{{$index+1}}</td>
-                                <td align="center">{{item.npm}}</td>
-                                <td align="center">{{item.nm_mahasiswa}}</td>
-                                <td align="center">{{item.alamat}}</td>
-                                <td align="center">{{item.jurusan}}</td>
-                                <td align="center">{{item.jenjang}}</td>
+                                <td align="center">{{item.no}}</td>
+                                <td align="center">{{item.butir_yang_dinilai}}</td>
                                 <td align="center"><button class="btn btn-info"
                                      id="modal-195230" data-target="#modal-container-195230" 
                                      data-toggle="modal" ng-click="GetData(item)">Ubah</button></td>
@@ -67,43 +61,22 @@
                             <form role="form">
                                 <div class="form-group">
 
-                                    <label for="exampleInputNpm">
-                                        NPM
+                                    <label for="exampleInputNo">
+                                        No
                                     </label>
-                                    <input type="text" class="form-control" id="exampleInputNpm" ng-model="input.npm" />
+                                    <input type="text" class="form-control" id="exampleInputNo" ng-model="input.no" />
                                     
                                 </div>
                                 <div class="form-group">
 
-                                    <label for="exampleInputnm_mahasiswa">
-                                        Nama Mahasiswa
+                                    <label for="exampleInputButirYangDinilai">
+                                       Butir Yang Dinilai
                                     </label>
-                                    <input type="text" class="form-control" id="exampleInputnm_mahasiswa" ng-model="input.nm_mahasiswa" />
+                                    <input type="text" class="form-control" id="exampleInputButirYangDinilai" ng-model="input.butir_yang_dinilai" />
                                 </div>
                                 <div class="form-group">
 
-                                    <label for="exampleInputAlamat">
-                                        Alamat
-                                    </label>
-                                    <input type="text" class="form-control" id="exampleInputAlamat" ng-model="input.alamat" />
-                                </div>
-                                <div class="form-group">
-
-                                    <label for="exampleInputJurusan">
-                                        Jurusan                                                   
-                                    </label>
-                                    
-                                    <select class="form-control" ng-options="item as item.jurusan for item in DatasJurusan track by item.kd_jurusan" ng-model="SelectedJurusan"></select>      
-                                </div>
-                                <div class="form-group">
-
-                                        <label for="exampleInputJenjang">
-                                        Jenjang
-                                        </label>
-                                        <select class="form-control" ng-options="item.Jenjang for item in Jenjang track by item.Jenjang" ng-model="selectedJenjang"></select>
-                                       
-                                    </div>
-
+                                
                         </div>
                         <div class="modal-footer">
 

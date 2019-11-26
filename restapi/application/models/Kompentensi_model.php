@@ -29,7 +29,7 @@ class Kompentensi_Model extends CI_Model
 
     public function delete($id)
     {
-        $this->db->where("npm", $id['npm']);
+        $this->db->where("no", $id['no']);
             $result =  $this->db->delete("kompentensi");
             return $result;
     }
