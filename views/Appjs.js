@@ -38,7 +38,17 @@
                     url: "/TahunAkademik",
                     templateUrl: "views/pages/TahunAkademik.html",
                     controller: "TahunAkademikController"
-                })
+                });
         })
+        .controller("view", function($scope, $window){
+            if($window.sessionStorage.getItem("Username")==undefined || $window.sessionStorage.getItem("Username")=="" || $window.sessionStorage.getItem("Username")==null){
+                window.location.href="login.html";
+            }
+            $scope.logout= function(){
+                sessionStorage.clear();
+                window.location.href="index.html";
+            }
+        })
+        
 
 }) (window.angular);

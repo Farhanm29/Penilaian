@@ -7,6 +7,7 @@
         "Kompetensi",
         "Matakuliah",
         "Penilaian",
-        "TahunAkademik"
+        "TahunAkademik",
+        "User"
     ]);
 })(window.angular);

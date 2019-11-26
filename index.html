@@ -3,11 +3,16 @@
 
 <head>
   <meta charset="utf-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="assets/img/apple-icon.png">
+  <link rel="icon" type="image/png" href="assets/img/favicon.png">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Creative - Bootstrap 3 Responsive Admin Template">
   <meta name="author" content="GeeksLabs">
   <meta name="keyword" content="Creative, Dashboard, Admin, Template, Theme, Bootstrap, Responsive, Retina, Minimal">
   <link rel="shortcut icon" href="img/favicon.png">
+
 
   <title>TUGAS BESAR</title>
 
@@ -20,15 +25,15 @@
   <link href="assets/css/elegant-icons-style.css" rel="stylesheet" />
   <link href="assets/css/font-awesome.min.css" rel="stylesheet" />
   <!-- full calendar css-->
-  <link href="assets/fullcalendar/fullcalendar/bootstrap-fullcalendar.css" rel="stylesheet" />
-  <link href="assets/fullcalendar/fullcalendar/fullcalendar.css" rel="stylesheet" />
+  <!-- <link href="assets/fullcalendar/fullcalendar/bootstrap-fullcalendar.css" rel="stylesheet" /> -->
+  <!-- <link href="assets/fullcalendar/fullcalendar/fullcalendar.css" rel="stylesheet" /> -->
   <!-- easy pie chart-->
   <link href="assets/jquery-easy-pie-chart/jquery.easy-pie-chart.css" rel="stylesheet" type="text/css" media="screen" />
   <!-- owl carousel -->
   <link rel="stylesheet" href="assets/css/owl.carousel.css" type="text/css">
   <link href="assets/css/jquery-jvectormap-1.2.2.css" rel="stylesheet">
   <!-- Custom styles -->
-  <link rel="stylesheet" href="assets/css/fullcalendar.css">
+  <!-- <link rel="stylesheet" href="assets/css/fullcalendar.css"> -->
   <link href="assets/css/widgets.css" rel="stylesheet">
   <link href="assets/css/style.css" rel="stylesheet">
   <link href="assets/css/style-responsive.css" rel="stylesheet" />
@@ -44,6 +49,7 @@
   <script src="views/Appjs.js"></script>
   <script src="views/Controller.js"></script>
 
+
   <!--Controller-->
   <script src="views/Controller/Mahasiswa.js"></script>
   <script src="views/Controller/Home.js"></script>
@@ -52,6 +58,7 @@
   <script src="views/Controller/Penilaian.js"></script>
   <script src="views/Controller/Matakuliah.js"></script>
   <script src="views/Controller/TahunAkademik.js"></script>
+  <script src="views/Controller/User.js"></script>
 </head>
 
 <body>
@@ -66,7 +73,7 @@
       </div>
 
       <!--logo start-->
-      <a href="index.html" class="logo">Penilaian <span class="lite">Dosen</span></a>
+      <a href="Admin.html" class="logo">Penilaian <span class="lite">Dosen</span></a>
       <!--logo end-->
 
       <div class="nav search-row" id="top_menu">
@@ -83,6 +90,13 @@
 
           <!-- alert notification end-->
           <!-- user login dropdown start-->
+          <!-- user login dropdown start-->
+          <li class="dropdown" ng-controller="view">
+          <li>
+            <a href="login.html"><i ng-click="logout()"></i>=>kleuar</a>
+          </li>
+
+          </li>
 
 
     </header>
@@ -103,42 +117,42 @@
             <a href="javascript:;" ui-sref="Mahasiswa" ui-sref-opts="{reload: true}">
               <i class="icon_document_alt"></i>
               <span>Mahasiswa</span>
-              
+
             </a>
           </li>
           <li class="sub-menu">
             <a href="javascript:;" ui-sref="Matakuliah" ui-sref-opts="{reload: true}">
               <i class="icon_document_alt"></i>
               <span>Matakuliah</span>
-              
+
             </a>
           </li>
           <li class="sub-menu">
             <a href="javascript:;" ui-sref="Penilaian" ui-sref-opts="{reload: true}">
               <i class="icon_document_alt"></i>
               <span>Penilaian</span>
-              
+
             </a>
           </li>
           <li class="sub-menu">
             <a href="javascript:;" ui-sref="DetailPenilaian" ui-sref-opts="{reload: true}">
               <i class="icon_document_alt"></i>
               <span>Detail Penilaian</span>
-              
+
             </a>
           </li>
           <li class="sub-menu">
             <a href="javascript:;" ui-sref="Kompetensi" ui-sref-opts="{reload: true}">
               <i class="icon_document_alt"></i>
               <span>Kompetensi</span>
-              
+
             </a>
           </li>
           <li class="sub-menu">
             <a href="javascript:;" ui-sref="TahunAkademik" ui-sref-opts="{reload: true}">
               <i class="icon_document_alt"></i>
               <span>Tahun Akademik</span>
-              
+
             </a>
           </li>
 
@@ -182,21 +196,9 @@
   <script src="assets/js/jquery.sparkline.js" type="text/javascript"></script>
   <script src="assets/jquery-easy-pie-chart/jquery.easy-pie-chart.js"></script>
   <script src="assets/js/owl.carousel.js"></script>
-  <!-- jQuery full calendar -->
-  <script src="assets/s/fullcalendar.min.js">
   </script>
-  <!-- Full Google Calendar - Calendar -->
-  <script src="assets/fullcalendar/fullcalendar/fullcalendar.js"></script>
-  <!--script for this page only-->
-  <script src="assets/js/calendar-custom.js"></script>
-  <script src="assets/js/jquery.rateit.min.js"></script>
-  <!-- custom select -->
   <script src="assets/js/jquery.customSelect.min.js"></script>
-  <script src="assets/chart-master/Chart.js"></script>
-
-  <!--custome script for all page-->
   <script src="assets/js/scripts.js"></script>
-  <!-- custom script for this page-->
   <script src="assets/js/sparkline-chart.js"></script>
   <script src="assets/js/easy-pie-chart.js"></script>
   <script src="assets/js/jquery-jvectormap-1.2.2.min.js"></script>

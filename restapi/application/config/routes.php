@@ -81,4 +81,5 @@ $route['detailpenilaian']['get'] = 'api/detailpenilaian/GetDetailpenilaian';
 $route['detailpenilaian']['post'] = 'api/detailpenilaian/InsertDetailpenilaian';
 $route['detailpenilaian']['put'] = 'api/detailpenilaian/UpdateDetailpenilaian';
 $route['detailpenilaian']['delete'] = 'api/detailpenilaian/DeleteDetailpenilaian';
+$route['User']['get'] = 'api/User/GetLogin';
 

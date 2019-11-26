@@ -1,8 +1,8 @@
 (function (angular) {
     'use strict'
-    angular.module("Tahunakademik", [])
-    .controller("TahunakademikController", function($scope,$http){
-        $scope.DatasKompetensi = [];
+    angular.module("TahunAkademik", [])
+    .controller("TahunAkademikController", function($scope,$http){
+        $scope.DatasTahunAkademik = [];
             $scope.input = {};
             $scope.status = "Simpan";
             $http({
@@ -18,7 +18,7 @@
                 if ($scope.status == "Simpan") {
                     $http({
                         method: "POST",
-                        url: "http://localhost/Penilaian/restapi/TahunAkademik",
+                        url: "http://localhost/Penilaian/restapi/tahunakademik",
                         data: $scope.input,
                         header: {
                             "Content-Type": "application/json"

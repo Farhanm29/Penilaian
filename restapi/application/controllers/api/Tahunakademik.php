@@ -71,7 +71,7 @@ class Tahunakademik extends API_Controller
     public function DeleteTahunakademik()
     {
         $id = $_GET;
-        $result = $this->MahasiswaModel->delete($id);
+        $result = $this->TahunakademikModel->delete($id);
         if ($result){
             $this->api_return(
                 [
