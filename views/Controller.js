@@ -9,5 +9,6 @@
         "Penilaian",
         "TahunAkademik",
         "User"
+        
     ]);
 })(window.angular);

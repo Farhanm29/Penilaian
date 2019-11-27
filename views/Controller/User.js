@@ -25,7 +25,7 @@
                         }
                         
                     }else{
-                        alert("Periksa User Name dan password anda");
+                        alert("PERIKSA KEMBALI USERNAME DAN PASWORD ANDA");
                     }
                     
                 }, function (error) {

@@ -1,76 +1,37 @@
 <?php
 
-class User_Model extends CI_Model
+class Userinrole_Model extends CI_Model
 {
-    protected $UserTable = 'user';
-    protected $MahasiswaTable = 'mahasiswa';
-    protected $UserinRoleTable = 'userinrole';
-    protected $RoleTable = 'role';
-    protected $PegawaiTable = 'pegawai';
-    public function insert_user(array $UserData)
+    public function insert($data)
     {
-        $this->db->insert($this->UserTable, $UserData);
-        return $this->db->insert_id();
+        $result = $this->db->insert("userinrole", $data);
+        return $result;
     }
 
-    public function fetch_all_users()
+    public function get($id)
     {
-        $query = $this->db->get('user');
-        foreach ($query->result() as $row) {
-            $user_data[] = [
-                'Username' => $row->Username,
-                'Email' => $row->Email,
-                'Insert' => $row->Insert,
-                'Update' => $row->Update,
-            ];
+        if($id != null){
+            $this->db->where("idmatakuliah", $id['idmatakuliah']);
+            $result =  $this->db->get("userinrole");
+            return $result->result_array();
+        }else{
+            $result =  $this->db->get("Userinrole");
+            return $result->result_array();
         }
-        return $user_data;
     }
 
-    public function GetUserRole($IdUser)
+    public function update($data)
     {
-        $this->db->where('Email', $Username);
-        $this->db->or_where('Username', $Username);
-        $q = $this->db->get($this->UserTable);
-
-        $a = $q->row();
-        $this->db->where('IdUser', $q->row('IdUser'));
-        $roleinuser = $this->db->get($this->UserinRoleTable);
-        if ($roleinuser->num_rows() > 0) {
-            $this->db->where('Id', $roleinuser->row('role_Id'));
-            $role = $this->db->get($this->RoleTable);
-            if ($role->row('Nama') == 'Mahasiswa') {
-                $IdUser = $q->row('IdUser');
-                $this->db->where('IdUser', $q->row('IdUser'));
-                $Biodata = $this->db->get($this->MahasiswaTable);
-                if ($Biodata->num_rows()) {
-                    $roleitem = array('Role' => array());
-                    $item = array('Nama' => $role->row('Nama'));
-                    array_push($roleitem['Role'], $item);
-                    $Nama = "NamaUser";
-                    $Role = "role";
-                    $a->$Nama = $Biodata->row('nmmhs');
-                    $a->$Role = (object) $roleitem;
-                }
-            } else {
-                $IdUser = $q->row('IdUser');
-                $this->db->where('IdUser', $q->row('IdUser'));
-                $Biodata = $this->db->get($this->PegawaiTable);
-                if ($Biodata->num_rows()) {
-                    $roleitem = array('Role' => array());
-                    foreach ($roleinuser->row() as &$value) {
-                        $item = array('Nama' => $value->Nama);
-                        array_push($roleitem['Role'], $item);
-                    }
-                    $Nama = "NamaUser";
-                    $Role = "role";
-                    $a->$Nama = $Biodata->row('nmmhs');
-                    $a->$Role = (object) $roleitem;
-                }
-
-            }
-        }
-
-        return $a;
+        $this->db->where("kdmk", $data->kdmk);
+        $result = $this->db->update("userinrole", $data);
+        return $result;
     }
+
+    public function delete($id)
+    {
+        $this->db->where("kdmk", $id['kdmk']);
+            $result =  $this->db->delete("userinrole");
+            return $result;
+    }
+    
 }

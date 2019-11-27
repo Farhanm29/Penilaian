@@ -82,4 +82,9 @@ $route['detailpenilaian']['post'] = 'api/detailpenilaian/InsertDetailpenilaian';
 $route['detailpenilaian']['put'] = 'api/detailpenilaian/UpdateDetailpenilaian';
 $route['detailpenilaian']['delete'] = 'api/detailpenilaian/DeleteDetailpenilaian';
 $route['User']['get'] = 'api/User/GetLogin';
+$route['userinrole']['get'] = 'api/userinrole/GetUserinrole';
+$route['userinrole']['post'] = 'api/userinrole/InsertUserinrole';
+$route['userinrole']['put'] = 'api/userinrole/UpdateUserinrole';
+$route['userinrole']['delete'] = 'api/userinrole/DeleteUserinrole';
+
 
