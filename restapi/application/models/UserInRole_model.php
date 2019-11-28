@@ -8,7 +8,7 @@ class Userinrole_Model extends CI_Model
         $result = $this->db->query("
         SELECT
                 `userinrole`.`iduserinrole`,
-                `userinrole`.`idUser`,
+                `userinrole`.`idUser`,  
                 `user`.`Username`,
                 `userinrole`.`idrole`,
                 `role`.`Nama_role`,
@@ -43,8 +43,8 @@ class Userinrole_Model extends CI_Model
             RIGHT JOIN `userinrole` ON `userinrole`.`idUser` = `user`.`Username`
             LEFT JOIN `role` ON `userinrole`.`idrole` = `role`.`Nama_role`
             
-            ")
-            return $result->result_array();
+            ");
+        return $result->result_array();
         }else{
             $result =  $this->db->query("
             SELECT
