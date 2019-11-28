@@ -38,6 +38,11 @@
                     url: "/TahunAkademik",
                     templateUrl: "views/pages/TahunAkademik.html",
                     controller: "TahunAkademikController"
+                })
+                .state("Userinrole", {
+                    url: "/Userinrole",
+                    templateUrl: "views/pages/Userinrole.html",
+                    controller: "UserinroleController"
                 });
         })
         .controller("view", function ($scope, $window) {

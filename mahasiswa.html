@@ -59,6 +59,8 @@
   <script src="views/Controller/Matakuliah.js"></script>
   <script src="views/Controller/TahunAkademik.js"></script>
   <script src="views/Controller/User.js"></script>
+  <script src="views/Controller/Userinrole.js"></script>
+ 
 </head>
 
 <body ng-controller="view">
@@ -93,7 +95,7 @@
           <!-- user login dropdown start-->
           <li class="dropdown">
           <li>
-              <button ng-click="logout()" >Keluar</button>
+              <button ng-click="logout()" class="btn btn-warning">Keluar</button>
           </li>
 
           </li>
@@ -114,9 +116,12 @@
             </a>
           </li>
           <li class="sub-menu">
-            <a href="javascript:;" ui-sref="Penilaian" ui-sref-opts="{reload: true}">
-              <i class="icon_document_alt"></i>
-              <span>Penilaian</span>
+              <a href="javascript:;" class="active-menu" ui-sref="Penilaian" ui-sref-opts="{reload: true}">
+                <i class="icon_house_alt"></i>
+                <span>Penilaian</span>
+              </a>
+            </li>
+          
             </a>
           </li>
         </ul>

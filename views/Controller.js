@@ -8,7 +8,9 @@
         "Matakuliah",
         "Penilaian",
         "TahunAkademik",
-        "User"
+        "User",
+        "Userinrole"
+      
         
     ]);
 })(window.angular);
