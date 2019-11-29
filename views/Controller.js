@@ -10,6 +10,7 @@
         "TahunAkademik",
         "User",
         "Userinrole"
+        // "Pertanyaan"
       
         
     ]);

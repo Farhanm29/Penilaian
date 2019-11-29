@@ -6,8 +6,13 @@
                 <div align="center">
                     <b>PENGGUNA</b>
                 </div>
+                <p>KETERANGAN:
+                    <br>
+                    ID ROLE: 3 = ADMIN
+                    <br>
+                    ID ROLE: 4 = MAHASISWA
+                </p>
 
-                <br>
                 <a style="margin-left: 16px;" id="modal-195230" href="" role="button" class="btn btn-primary"
                     data-target="#modal-container-195230" data-toggle="modal" ng-click="GetSimpan()">Tambah</a>
                 <div class="panel-body">
@@ -16,21 +21,19 @@
                         <table class="table table-striped table-bordered table-hover">
                             <tdead>
                                 <tr>
-                                    <td align="center"><b>Id User</b></td>
+                                    <td align="center"><b>No</b></td>
                                     <td align="center"><b>User Name</b></td>
-                                    <td align="center"><b>id Role</b></td>
                                     <td align="center"><b>Nama Role</b></td>
                                     <td align="center"><b>Pasword</b></td>
                                     <td align="center"><b>Email</b></td>
-                                    <td align="center"><b>Nama</b></td>
+                                    <td align="center"><b>Nama Pengguna</b></td>
                                     <td align="center" colspan="2"><b>Action</b></td>
                                 </tr>
                             </tdead>
                             <tbody>
                                 <tr ng-repeat="item in DatasUserinrole">
-                                    <td align="center">{{item.idUser}}</td>
+                                    <td align="center">{{$index+1}}</td>
                                     <td align="center">{{item.Username}}</td>
-                                    <td align="center">{{item.idrole}}</td>
                                     <td align="center">{{item.Nama_role}}</td>
                                     <td align="center">{{item.Pasword}}</td>
                                     <td align="center">{{item.email}}</td>
@@ -71,36 +74,44 @@
                                 <form role="form">
                                     <div class="form-group">
 
-                                        <label for="exampleInputNpm">
-                                            NPM
+                                        <label for="exampleInputUsername">
+                                            User Name
                                         </label>
-                                        <input type="text" class="form-control" id="exampleInputNpm"
-                                            ng-model="input.npm" />
+                                        <input type="text" class="form-control" id="exampleInputUsername"
+                                            ng-model="input.Username" />
 
                                     </div>
                                     <div class="form-group">
 
-                                        <label for="exampleInputnm_mahasiswa">
-                                            Nama Mahasiswa
+                                        <label for="exampleInputNama_role">
+                                            Nama Rol
                                         </label>
-                                        <input type="text" class="form-control" id="exampleInputnm_mahasiswa"
-                                            ng-model="input.nama_mahasiswa" />
+                                        <input type="text" class="form-control" id="exampleInputNama_role"
+                                            ng-model="input.Nama_role" />
                                     </div>
                                     <div class="form-group">
 
-                                        <label for="exampleInputAlamat">
-                                            Kelas
+                                        <label for="exampleInputPasword">
+                                            Pasword
                                         </label>
-                                        <input type="text" class="form-control" id="exampleInputKelas"
-                                            ng-model="input.kls" />
+                                        <input type="text" class="form-control" id="exampleInputPasword"
+                                            ng-model="input.Pasword" />
                                     </div>
                                     <div class="form-group">
 
-                                        <label for="exampleInputAlamat">
-                                            Program Studi
+                                        <label for="exampleInputemail">
+                                            Email
                                         </label>
-                                        <input type="text" class="form-control" id="exampleInputProgramStudi"
-                                            ng-model="input.program_studi" />
+                                        <input type="text" class="form-control" id="exampleInputemail"
+                                            ng-model="input.email" />
+                                    </div>
+                                    <div class="form-group">
+
+                                        <label for="exampleInputNama">
+                                            Nama Pengguna
+                                        </label>
+                                        <input type="text" class="form-control" id="exampleInputNama"
+                                            ng-model="input.Nama" />
                                     </div>
                             </div>
                             <div class="modal-footer">

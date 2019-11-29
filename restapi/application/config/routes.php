@@ -73,7 +73,7 @@ $route['tahunakademik']['get'] = 'api/Tahunakademik/GetTahunakademik';
 $route['tahunakademik']['post'] = 'api/Tahunakademik/InsertTahunakademik';
 $route['tahunakademik']['put'] = 'api/Tahunakademik/UpdateTahunakademik';
 $route['tahunakademik']['delete'] = 'api/Tahunakademik/DeleteTahunakademik';
-$route['kompentensi']['get'] = 'api/Kompentensi/GetKompentensi';
+$route['kompentensi']['get'] = 'api/Kompentensi/Pertanyaan';
 $route['kompentensi']['post'] = 'api/Kompentensi/InsertKompentensi';
 $route['kompentensi']['put'] = 'api/Kompentensi/UpdateKompentensi';
 $route['kompentensi']['delete'] = 'api/Kompentensi/DeleteKompentensi';
@@ -86,5 +86,8 @@ $route['userinrole']['get'] = 'api/userinrole/GetUserinrole';
 $route['userinrole']['post'] = 'api/userinrole/InsertUserinrole';
 $route['userinrole']['put'] = 'api/userinrole/UpdateUserinrole';
 $route['userinrole']['delete'] = 'api/userinrole/DeleteUserinrole';
-
+$route['pertanyaan']['get'] = 'api/Pertanyaan/GetPertanyaan';
+$route['pertanyaan']['post'] = 'api/Pertanyaan/InsertPertanyaan';
+$route['pertanyaan']['put'] = 'api/Pertanyaan/UpdatePertanyaan';
+$route['pertanyaan']['delete'] = 'api/Pertanyaan/DeletePertanyaan';
 

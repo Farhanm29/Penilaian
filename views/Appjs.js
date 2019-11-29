@@ -44,6 +44,11 @@
                     templateUrl: "views/pages/Userinrole.html",
                     controller: "UserinroleController"
                 });
+                // .state("Pertanyaan", {
+                //     url: "/Pertanyaan",
+                //     templateUrl: "views/pages/Pertanyaan.html",
+                //     controller: "PertanyaanController"
+                // });
         })
         .controller("view", function ($scope, $window) {
             if ($window.sessionStorage.getItem("Username") == "undefined" || $window.sessionStorage.getItem("Username") == "" || $window.sessionStorage.getItem("Username") == null) {

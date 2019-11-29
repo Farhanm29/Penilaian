@@ -16,16 +16,16 @@
                     <table class="table table-striped table-bordered table-hover">
                         <tdead>
                             <tr>
-                                <td align="center"><b>No</b></td>
-                                <td align="center"><b>No Kompetensi</b></td>
-                                <td align="center"><b>Butir_Yang_Dinilai</b></td>
+                                <td align="center"><b>ID Kompetensi</b></td>
+                                <td align="center"><b>Kompetensi</b></td>
+                                <td align="center"><b>Pertanyaan</b></td>
                                 <td align="center" colspan="2"><b>Action</b></td>
                             </tr>
                         </tdead>
                         <tbody>
                             <tr ng-repeat="item in DatasKompetensi">
-                                <td align="center">{{$index+1}}</td>
-                                <td align="center">{{item.no}}</td>
+                                <td align="center">{{item.idkompetensi}}</td>
+                                <td align="center">{{item.kompetensi}}</td>
                                 <td align="center">{{item.butir_yang_dinilai}}</td>
                                 <td align="center"><button class="btn btn-info"
                                      id="modal-195230" data-target="#modal-container-195230" 

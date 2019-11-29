@@ -1,19 +1,19 @@
 (function (angular) {
     'use strict'
     angular.module("Penilaian", [])
-    .controller("PenilaianController", function($scope,$http){
-        $scope.DatasPenilaian = [];
+        .controller("PenilaianController", function ($scope, $http) {
+            $scope.DatasPenilaian = [];
+            $scope.Pertanyaan = [];
             $scope.input = {};
             $scope.status = "Simpan";
             $http({
                 method: "get",
-                url: "http://localhost/Penilaian/restapi/penilaian",
+                url: "http://localhost/Penilaian/restapi/kompentensi",
                 header: {
                     "Content-Type": "application/json"
                 }
             }).then(function (response) {
-                $scope.DatasPenilaian = response.data.result
+                $scope.Pertanyaan = response.data.result.Kompetensi
             })
-
-    })
+        })
 })(window.angular);

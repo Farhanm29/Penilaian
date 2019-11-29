@@ -7,18 +7,11 @@ class Userinrole_Model extends CI_Model
         $result = $this->db->insert("userinrole", $data);
         $result = $this->db->query("
         SELECT
-                `userinrole`.`iduserinrole`,
-                `userinrole`.`idUser`,  
-                `user`.`Username`,
-                `userinrole`.`idrole`,
-                `role`.`Nama_role`,
-                `user`.`Pasword`,
-                `user`.`email`,
-                `user`.`Nama`
-            FROM
-            `user`
-            RIGHT JOIN `userinrole` ON `userinrole`.`idUser` = `user`.`Username`
-            LEFT JOIN `role` ON `userinrole`.`idrole` = `role`.`Nama_role`
+        *
+      FROM
+        `user`
+        LEFT JOIN `userinrole` ON `user`.`idUser` = `userinrole`.`idUser`
+        LEFT JOIN `role` ON `userinrole`.`idrole` = `role`.`idrole`
         ");
         return $result;
     }
@@ -30,36 +23,22 @@ class Userinrole_Model extends CI_Model
             $result =  $this->db->get("userinrole");
             $result = $this->db->query("
             SELECT
-                `userinrole`.`iduserinrole`,
-                `userinrole`.`idUser`,
-                `user`.`Username`,
-                `userinrole`.`idrole`,
-                `role`.`Nama_role`,
-                `user`.`Pasword`,
-                `user`.`email`,
-                `user`.`Nama`
+            *
             FROM
             `user`
-            RIGHT JOIN `userinrole` ON `userinrole`.`idUser` = `user`.`Username`
-            LEFT JOIN `role` ON `userinrole`.`idrole` = `role`.`Nama_role`
+            LEFT JOIN `userinrole` ON `user`.`idUser` = `userinrole`.`idUser`
+            LEFT JOIN `role` ON `userinrole`.`idrole` = `role`.`idrole`
             
             ");
         return $result->result_array();
         }else{
             $result =  $this->db->query("
             SELECT
-                `userinrole`.`iduserinrole`,
-                `userinrole`.`idUser`,
-                `user`.`Username`,
-                `userinrole`.`idrole`,
-                `role`.`Nama_role`,
-                `user`.`Pasword`,
-                `user`.`email`,
-                `user`.`Nama`
+            *
             FROM
             `user`
-            RIGHT JOIN `userinrole` ON `userinrole`.`idUser` = `user`.`Username`
-            LEFT JOIN `role` ON `userinrole`.`idrole` = `role`.`Nama_role`
+            LEFT JOIN `userinrole` ON `user`.`idUser` = `userinrole`.`idUser`
+            LEFT JOIN `role` ON `userinrole`.`idrole` = `role`.`idrole`
             ");
 
             return $result->result_array();
@@ -75,7 +54,7 @@ class Userinrole_Model extends CI_Model
 
     public function delete($id)
     {
-        $this->db->where("kdmk", $id['kdmk']);
+        $this->db->where("iduserinrole", $id['iduserinrole']);
             $result =  $this->db->delete("userinrole");
             return $result;
     }

@@ -1,127 +1,59 @@
-<div class="row">
-    <div class="col-md-12">
-        <!--   Kitchen Sink -->
-        <div class="panel panel-default">
-            <div class="panel-heading">
-                <div align="center">
-                    <b>PENILAIAN</b>
-                </div>
-            </div>
-            <br>
-
-            <h1>Kelas: berapa</h1>
-
-            <a style="margin-left: 10px;" id="modal-195230" href="" role="button" class="btn btn-primary"
-                data-target="#modal-container-195230" data-toggle="modal" ng-click = "GetSimpan()">ADD</a>
-            <div class="panel-body">
-
-                <div class="table-responsive">
-                    <table class="table table-striped table-bordered table-hover">
-                        <tdead>
-                            <tr>
-                                <td align="center"><b>No</b></td>
-                                <td align="center"><b>NPM</b></td>
-                                <td align="center"><b>KDMK</b></td>
-                                <td align="center"><b>Saran</b></td>
-                                <td align="center"><b>Nilai</b></td>
-                                <td align="center"><b>Id Tahun Akademik</b></td>
-                                <td align="center" colspan="2"><b>Action</b></td>
-                            </tr>
-                        </tdead>
-                        <tbody>
-                            <tr ng-repeat="item in DatasPenilaian">
-                                <td align="center">{{$index+1}}</td>
-                                <td align="center">{{item.npm}}</td>
-                                <td align="center">{{item.kdmk}}</td>
-                                <td align="center">{{item.saran}}</td>
-                                <td align="center">{{item.nilai}}</td>
-                                <td align="center">{{item.idtahunakademik}}</td>
-                                <td align="center"><button class="btn btn-info"
-                                     id="modal-195230" data-target="#modal-container-195230" 
-                                     data-toggle="modal" ng-click="GetData(item)">Ubah</button></td>
-                                <td align="center"><button class="btn btn-warning"  ng-click ="Hapus(item)">Hapus</button></td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
+<div class="col-md-12">
+    <!--   Kitchen Sink -->
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            <div align="center">
+                <b>PENILAIAN</b>
             </div>
         </div>
-        <!-- End  Kitchen Sink -->
-    </div>
-</div>
-<div class="container-fluid">
-    <div class="row">
-        <div class="col-md-12">
+        <br>
+        <h4>keterangan:</h4>
+        <h4>Nama : Bagus Joko </h4>
+        <h4>Semester : 4</h4>
 
 
-            <div class="modal fade" id="modal-container-195230" role="dialog" aria-labelledby="myModalLabel"
-                aria-hidden="true">
-                <div class="modal-dialog" role="document">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <h5 class="modal-title" id="myModalLabel">
-                                MASUKAN DATA    
-                            </h5>
-                            <button type="button" class="close" data-dismiss="modal">
-                                <span aria-hidden="true">×</span>
-                            </button>
+        <p align="center">PILIH MATAKULIAH YANG ANDA NILAI</p>
+        <section class="panel" ng-repeat="item in Pertanyaan">
+            <header class="panel-heading">
+                {{item.Kompetensi}}
+            </header>
+
+            <div class="panel-body">
+                <div ng-class="item.klas">
+                    <div ng-repeat="pertanyaan in item.Pertanyaan">
+                        <div class="panel-heading">
+                            {{pertanyaan.butir_yang_dinilai}}
                         </div>
-                        <div class="modal-body">
-                            <form role="form">
-                                <div class="form-group">
-
-                                    <label for="exampleInputNpm">
-                                        NPM
+                        <div class="panel-content">
+                            <div class="form-group">
+                                <div>
+                                    <label class="radio-inline">
+                                        <input type="radio" name="{{pertanyaan.no}}" id="optionsRadios1" value="1">
+                                        Kurang
+                                        Baik
                                     </label>
-                                    <input type="text" class="form-control" id="exampleInputNpm" ng-model="input.npm" />
-                                    
-                                </div>
-                                <div class="form-group">
-
-                                    <label for="exampleInputnm_mahasiswa">
-                                        Nama Mahasiswa
+                                    <label class="radio-inline">
+                                        <input type="radio" name="{{pertanyaan.no}}" id="optionsRadios2" value="2"> Baik
                                     </label>
-                                    <input type="text" class="form-control" id="exampleInputnm_mahasiswa" ng-model="input.nm_mahasiswa" />
-                                </div>
-                                <div class="form-group">
-
-                                    <label for="exampleInputAlamat">
-                                        Alamat
+                                    <label class="radio-inline">
+                                        <input type="radio" name="{{pertanyaan.no}}" id="optionsRadios3" value="3">
+                                        Cukup
+                                        Baik
                                     </label>
-                                    <input type="text" class="form-control" id="exampleInputAlamat" ng-model="input.alamat" />
-                                </div>
-                                <div class="form-group">
-
-                                    <label for="exampleInputJurusan">
-                                        Jurusan                                                   
+                                    <label class="radio-inline">
+                                        <input type="radio" name="{{pertanyaan.no}}" id="optionsRadios4" value="4">
+                                        Sangat
+                                        Baik
                                     </label>
-                                    
-                                    <select class="form-control" ng-options="item as item.jurusan for item in DatasJurusan track by item.kd_jurusan" ng-model="SelectedJurusan"></select>      
                                 </div>
-                                <div class="form-group">
-
-                                        <label for="exampleInputJenjang">
-                                        Jenjang
-                                        </label>
-                                        <select class="form-control" ng-options="item.Jenjang for item in Jenjang track by item.Jenjang" ng-model="selectedJenjang"></select>
-                                       
-                                    </div>
-
-                        </div>
-                        <div class="modal-footer">
-
-                            <button type="button" class="btn btn-primary" ng-click = "Simpan()">
-                                Save </button>
-                            <button type="button" class="btn btn-secondary" data-dismiss="modal">
-                                Close
-                            </button>
+                            </div>
                         </div>
                     </div>
 
                 </div>
-
+                <button  type="button" class ="btn btn-primary" ng-click = "Simpan()">
+                    Save </button>
             </div>
-
-        </div>
+        </section>
     </div>
-</div>
+    <!-- End  Kitchen Sink -->

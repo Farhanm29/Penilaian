@@ -1,8 +1,8 @@
 (function (angular) {
     'use strict'
     angular.module("Kompetensi", [])
-    .controller("KompetensiController", function($scope,$http){
-        $scope.DatasKompetensi = [];
+        .controller("KompetensiController", function ($scope, $http) {
+            $scope.DatasKompetensi = [];
             $scope.input = {};
             $scope.status = "Simpan";
             $http({
@@ -58,18 +58,18 @@
                     alert("Gagal Menghapus");
                 })
             }
-            $scope.GetData=function(item){
+            $scope.GetData = function (item) {
                 $scope.input = item;
-                $scope.status="Update";
+                $scope.status = "Update";
 
             }
-           
+
             $scope.GetSimpan = function (item) {
                 $scope.input = {};
                 $scope.status = "Simpan";
             }
-           
-    
 
-    })
+
+
+        })
 })(window.angular);
